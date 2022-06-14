@@ -82,6 +82,6 @@ with st.container():
 
 
     if selected == "Contacts":
-        content = "vous pouvez me contacter sur [Learn more >](https://www.twitter.com/__korpikopan__)"
+        content = "!!En Construction!!"
         create_page(content, page_title=selected)
 
