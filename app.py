@@ -47,7 +47,7 @@ with st.container():
         uploaded_file = st.file_uploader("1. Importe le fichier csv (sous forme de tableau)", type=["csv"])
         
         if uploaded_file:
-            df = pd.read_csv(uploaded_file, sep=';')
+            df = pd.read_csv(uploaded_file)
             st.dataframe(df)
             st.write("---")
 
