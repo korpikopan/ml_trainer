@@ -64,7 +64,7 @@ with st.container():
             st.write("---")
             sample_train_test_size = st.slider("choisissez la taille de l'échantillon d'apprentissage ( recommendation à 70%)", 0, 100, 70)
 
-            xtrain, xtest, ytrain, ytest = train_test_split(data, target, train_size=sample_train_test_size/100.0)
+            xtrain, xtest, ytrain, ytest = train_test_split(data, target, train_size=sample_train_test_size/100.0, random_state=1)
             st.write("##")
 
             train_button = st.button("Entrainer le modèle")
@@ -74,10 +74,10 @@ with st.container():
 
                 score = model.score(xtest, ytest)
                 if score >= 0.75:
-                    st.write("Modele de prediction correct! Score de précision à {}".format(score*100.0))
+                    st.success("Modele de prediction correct! Score de précision à {}".format(score*100.0))
                 
                 else:
-                    st.write("Modele de prediction non performant! Score de précision à {}".format(score*100.0))
+                    st.error("Modele de prediction non performant! Score de précision à {}".format(score*100.0))
 
 
 
