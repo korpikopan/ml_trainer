@@ -4,3 +4,4 @@ sklearn
 numpy
 openpyxl
 streamlit-option-menu
+matplotlib
