@@ -44,10 +44,10 @@ with st.container():
         create_page(content, page_title=selected)
         st.write("---")
         
-        uploaded_file = st.file_uploader("1. Importe le fichier xlsx/csv (sous forme de tableau)", type=["csv", "xlsx"])
+        uploaded_file = st.file_uploader("1. Importe le fichier csv (sous forme de tableau)", type=["csv"])
         
         if uploaded_file:
-            df = pd.read_csv(uploaded_file)
+            df = pd.read_csv(uploaded_file, sep=';')
             st.dataframe(df)
             st.write("---")
 
